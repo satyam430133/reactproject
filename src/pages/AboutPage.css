@@ -1,0 +1,54 @@
+.custom-container {
+    max-width: auto;    
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .custom-heading {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .custom-lead {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .mission-section {
+    margin-top: 50px;
+  }
+  
+  .team-section {
+    margin-top: 50px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+    color: #333;
+  }
+  
+  .card-text {
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 20px;
+    }
+  }
+  
