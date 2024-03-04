@@ -19,9 +19,10 @@ const SearchResultsPage = () => {
   const products = Product || [];
 
   // Filter the products based on the search term
-  const searchResults = products.filter(product =>
-    product.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const searchResults = searchTerm ? 
+    products.filter(product =>
+      product.name.toLowerCase().includes(searchTerm.toLowerCase())
+    ) : [];
 
   return (
    <> 
@@ -31,9 +32,9 @@ const SearchResultsPage = () => {
       <h1> Search Result </h1>
       {searchTerm}
       </div>
-      <div className="row row-cols-1 row-cols-md-3 g-4">
-        {searchResults.length > 0 ? (
-          searchResults.map(product => (
+      {searchTerm && searchResults.length > 0 && (
+        <div className="row row-cols-1 row-cols-md-3 g-4">
+          {searchResults.map(product => (
             <div key={product.id} className="col">
               <div className="card h-100">
                 <img src={product.image} className="card-img-top" alt={product.name} />
@@ -47,11 +48,12 @@ const SearchResultsPage = () => {
                 </button>
               </div>
             </div>
-          ))
-        ) : (
-          <h2 className="text-center">No Results Found</h2>
-        )}
-      </div>
+          ))}
+        </div>
+      )}
+      {searchTerm && searchResults.length === 0 && (
+        <h2 className="text-center">No Results Found</h2>
+      )}
     </div>
     <div style={{height:"40px"}}> </div>
    </>

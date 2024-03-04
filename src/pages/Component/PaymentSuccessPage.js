@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { clearCart } from './ProductSlice'; // Import clearCart action from your cart slice
+import { clearCart } from './ProductSlice';
 
 const PaymentSuccessPage = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    // Simulate payment processing for 3 seconds
+
     const timer = setTimeout(() => {
-      setIsProcessing(false); // After 3 seconds, set isProcessing to false
+      setIsProcessing(false); 
+      dispatch(clearCart());
     }, 3000);
 
-    // Clean up timer to prevent memory leaks
     return () => clearTimeout(timer);
   }, [dispatch]);
 
