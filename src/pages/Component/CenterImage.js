@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./centimg.css"
 const CenterImage=()=> {
   return (
@@ -10,7 +11,7 @@ const CenterImage=()=> {
         <div className="details">
           <h2> Party </h2>
           <p>Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button className="button"> Know More </button>
+          <button className="button"> <Link style={{color:"white",textDecoration:"none"}} to="/contact"> Know More </Link> </button>
         </div>
       </div>
       <div className="box">
@@ -20,7 +21,7 @@ const CenterImage=()=> {
         <div className="details">
           <h2> Consert  </h2>
           <p>Description Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button className="button"> Know More </button>
+          <button className="button"> <Link style={{color:"white",textDecoration:"none"}} to="/contact"> Know More </Link> </button>
         </div>
       </div>
     </div>   

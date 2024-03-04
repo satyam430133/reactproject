@@ -7,6 +7,11 @@ const AddressForm = ({ onSubmit }) => {
   const [state, setState] = useState('');
   const [postalCode, setPostalCode] = useState('');
 
+  // Function to check if all fields are filled
+  const isFormFilled = () => {
+    return streetAddress.trim() !== '' && city.trim() !== '' && state.trim() !== '' && postalCode.trim() !== '';
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const address = {
@@ -21,32 +26,32 @@ const AddressForm = ({ onSubmit }) => {
 
   return (
     <>
-    <div id='addressform'> <br/>
-    <div style={{marginTop:"90px"}}> </div>
-      <h2>Address Form</h2>
-      <div>
-        <div className="mb-4">
-          <label className="form-label">Street Address:</label>
-          <input type="text" className="form-control" value={streetAddress} onChange={(e) => setStreetAddress(e.target.value)} />
+      <div id='addressform'> <br/>
+        <div style={{marginTop:"90px"}}> </div>
+        <h2>Address Form</h2>
+        <div>
+          <div className="mb-4">
+            <label className="form-label">Street Address:</label>
+            <input type="text" className="form-control" value={streetAddress} onChange={(e) => setStreetAddress(e.target.value)} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">City:</label>
+            <input type="text" className="form-control" value={city} onChange={(e) => setCity(e.target.value)} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">State:</label>
+            <input type="text" className="form-control" value={state} onChange={(e) => setState(e.target.value)} />
+          </div>
+          <div className="mb-3">
+            <label className="form-label">Postal Code:</label>
+            <input type="text" className="form-control" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} />
+          </div>
+          {/* Conditionally render button based on form fill status */}
+          <button type="button" className="btn btn-primary" disabled={!isFormFilled()}> <Link className='buttoncolor' to={isFormFilled() ? "/paymentpage" : ""}> Proceed to Buy </Link> </button>
         </div>
-        <div className="mb-3">
-          <label className="form-label">City:</label>
-          <input type="text" className="form-control" value={city} onChange={(e) => setCity(e.target.value)} />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">State:</label>
-          <input type="text" className="form-control" value={state} onChange={(e) => setState(e.target.value)} />
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Postal Code:</label>
-          <input type="text" className="form-control" value={postalCode} onChange={(e) => setPostalCode(e.target.value)} />
-        </div>
-        <button type="button" className="btn btn-primary"> <Link className='buttoncolor' to="/paymentpage"> Proceed to Buy </Link> </button>
       </div>
-    </div>
     </>
   );
 };
 
 export default AddressForm;
-

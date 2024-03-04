@@ -11,6 +11,7 @@ const Home=()=>{
         <CenterImage />
         <Cards /> <br /> <br />
         {/* <CenterImage /> */}
+        
         <div className="testimonials-section text-center">
         <div className="section-content">
           <h2>What Our Customers Say</h2>
@@ -39,6 +40,7 @@ const Home=()=>{
           </div>
         </div>
       </div>
+      
         </>
     )
 };

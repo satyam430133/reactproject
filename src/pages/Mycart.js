@@ -26,9 +26,10 @@ const MyCart = () => {
   }
   return (
     <>
-      <div style={{height:"90px"}}></div>
+      <div style={{height:"100px"}}></div>
       <div className='mycartt'>   
         <h2> My Cart </h2>
+        <br/> <br/>
         {cartItems.length === 0 && (
           <>
             <div style={animationstyle}>
@@ -37,8 +38,10 @@ const MyCart = () => {
         <img src='https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-7359557-6024626.png?f=webp' alt="Empty Cart" />
         </div>
     </div>
-</div>
-            <button className='btn'> <Link className='buttoncolor' to="/"> Continue Shopping </Link> </button>
+</div> <br /><br /> 
+<center>
+<button className='btn'> <Link className='buttoncolor' to="/"> Continue Shopping </Link> </button>
+</center>
           </>
         )}
         {cartItems.length > 0 && (

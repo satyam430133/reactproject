@@ -12,6 +12,7 @@ const PaymentPage = () => {
   const [expiryDate, setExpiryDate] = useState('');
   const [cvv, setCvv] = useState('');
   const [isLoading, setIsLoading] = useState(false); // State to track loading status
+
   const handlePayment = async (e) => {
     e.preventDefault();
     setIsLoading(true); // Set loading state to true when form is submitted
@@ -34,6 +35,25 @@ const PaymentPage = () => {
       setIsLoading(false); // Set loading state back to false if payment fails
     }
   };  
+
+  // Function to check if payment method requires additional details
+  const requiresAdditionalDetails = (method) => {
+    return method === 'card' || method === 'upi';
+  };
+
+  // Function to check if payment is ready to proceed
+  const isPaymentReady = () => {
+    if (requiresAdditionalDetails(paymentMethod)) {
+      // Check if card details are filled
+      if (paymentMethod === 'card') {
+        return cardNumber.trim() !== '' && expiryDate.trim() !== '' && cvv.trim() !== '';
+      }
+      // For UPI, no additional check required
+      return true;
+    }
+    // For other methods like COD, proceed directly
+    return true;
+  };
 
   return (
     <>
@@ -80,27 +100,11 @@ const PaymentPage = () => {
             <>
               <div style={{textAlign:"center"}}>
                 <img src='https://www.kvgbank.com/images/gallery/upi.png' /> <br/>
-                <label for='upi' > Enter Your UPI ID </label>  <input type='text' name='upi' />                
+                <label htmlFor='upi'> Enter Your UPI ID </label>  <input type='text' name='upi' />                
               </div>
             </>
           )}
-          {paymentMethod === 'phonepe-gpay' && (
-            <>
-              <div style={{display:"flex",alignItems:"center",justifyContent:"center",gap:"5%"}}>
-                <img src='https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg' alt='...' />
-                <p> Scan This QR to Pay </p>
-                <img src='https://entrackr.com/storage/2020/04/Phonepe-gpay.jpg' alt='...' width="600px" /> <br/>
-              </div>
-            </>
-          )}
-           {paymentMethod === 'cod' && (
-            <>
-              <div style={{textAlign:"center"}}>
-                <img src='https://media.geeksforgeeks.org/wp-content/uploads/20231102162212/CASH-ON-DELIVERY-copy-(2).webp' /> <br/>
-              </div>
-            </>
-          )}
-          <button class="btn"> <Link className='buttoncolor' to="/paymentsuccess"> Proceed to Payment </Link> </button>
+          <button class="btn" disabled={!isPaymentReady()}> <Link className='buttoncolor' to="/paymentsuccess"> Proceed to Payment </Link> </button>
         </form>
       </div>
       <div style={{height:"90px"}}></div>

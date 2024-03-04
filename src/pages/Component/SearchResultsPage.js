@@ -27,8 +27,10 @@ const SearchResultsPage = () => {
    <> 
    <div style={{height:"150px"}}> </div>
     <div className="container py-4">
-      <h1 className="text-center mb-4">Search Results</h1>
-      <h2 className="mb-4">Search Term: {searchTerm}</h2>
+      <div style={{marginLeft:"400px"}}>
+      <h1> Search Result </h1>
+      {searchTerm}
+      </div>
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {searchResults.length > 0 ? (
           searchResults.map(product => (

@@ -6,43 +6,55 @@ const AboutPage = () => {
   return (
     <>
     <div style={{height:"90px"}}> </div>
-    <div className="about-wrapper">
-      <div className="jumbotron jumbotron-fluid text-center">
-        <div className="containerr">
-          <h1 className="display-4">About Us</h1> <br/>
-          <p className="lead">Welcome to our company's About page. Here you can learn more about who we are and what we do.</p>
+    <section id="about" className="py-5">
+        <div className="container contact">
+          <div className="row">
+            <div className="col-lg-6">
+              <h2>About Us</h2>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, natus?</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, ullam.</p>
+            </div>
+            <div className="col-lg-6">
+              <img src="https://pngimg.com/d/tom_and_jerry_PNG60.png" alt="About" className="img-fluid rounded-circle" />
+            </div>
+          </div>
         </div>
-      </div>
+        </section>
 
-      <div className="mission-section text-center">
-        <div className="section-content">
-          <h2>Our Mission</h2>
-          <p>Our mission is to provide high-quality products and excellent customer service to our clients.</p>
+        <section id="services" className="bg-dark py-3">
+        <div className="container contact">
+          <div className="row">
+            <div className="col-lg-4 h-auto mb-4">
+              <div className="card bg-no text-white text-center">
+                <div className="card-body">
+                  <img style={{height:"160px"}} src='https://www.restaurant-hospitality.com/sites/restaurant-hospitality.com/files/styles/article_featured_retina/public/uploads/2016/10/thinkstockphotos-504698004.jpg?itok=grnIQJ3d' alt=''/>
+                  <h3 className="card-title"> Restro </h3>
+                  <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vero?</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 mb-4">
+              <div className="card bg-no text-white text-center">
+                <div className="card-body">
+                <img style={{height:"160px"}} src='https://www.restaurant-hospitality.com/sites/restaurant-hospitality.com/files/styles/article_featured_retina/public/uploads/2016/10/thinkstockphotos-504698004.jpg?itok=grnIQJ3d' alt=''/>
+                  <h3 className="card-title"> Pub </h3>
+                  <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vero?</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-lg-4 mb-4">
+              <div className="card bg-no text-white text-center">
+                <div className="card-body">
+                  <img style={{height:"160px"}} src='https://www.restaurant-hospitality.com/sites/restaurant-hospitality.com/files/styles/article_featured_retina/public/uploads/2016/10/thinkstockphotos-504698004.jpg?itok=grnIQJ3d' alt=''/>
+                  <h3 className="card-title"> Bar </h3>
+                  <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, vero?</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-      
-      <div className="vision-section text-center">
-        <div className="section-content">
-          <h2>Our Vision</h2>
-          <p>Our vision is to become the leading provider of innovative solutions in our industry, while maintaining our commitment to sustainability and social responsibility.</p>
-        </div>
-      </div>
-
-      <div className="values-section text-center">
-        <div className="section-content">
-          <h2>Our Values</h2>
-          <ul className="list-unstyled">
-            <li><strong>Customer Focus:</strong> We prioritize our customers' needs and satisfaction above all else.</li>
-            <li><strong>Innovation:</strong> We continuously seek new and better ways to serve our customers and improve our products.</li>
-            <li><strong>Integrity:</strong> We conduct business with honesty, transparency, and respect for all stakeholders.</li>
-            <li><strong>Teamwork:</strong> We foster a collaborative and inclusive work environment where every team member is valued and empowered.</li>
-            <li><strong>Community:</strong> We are committed to giving back to the communities in which we operate and making a positive impact.</li>
-          </ul>
-        </div>
-      </div>
-
-     
-    </div>
+      </section>
+        
     </>
   );
 };
