@@ -10,6 +10,8 @@ import AddressForm from "./AddressForm";
 import PaymentSuccessPage from "./PaymentSuccessPage";
 import { useSelector } from "react-redux";
 import SearchResultsPage from "./SearchResultsPage";
+import PubPage from "./PubPage";
+import BarPage from "./BarPage";
 
 const Navbar = () => {
   const cartItems = useSelector((state) => state.addtocart.cart);
@@ -73,6 +75,9 @@ const Navbar = () => {
         <Route path="/paymentpage" element={<PaymentPage/>} />
         <Route path="/paymentsuccess" element={<PaymentSuccessPage />} />
         <Route path="/search-results" element={<SearchResultsPage />} /> {/* Pass location prop */}
+        <Route path="/pubpage" element={<PubPage />} />
+        <Route path="/barpage" element={<BarPage />} />
+
       </Routes>
     </Router>
   );

@@ -9,14 +9,14 @@ const Caraosal = () => {
         </div>
         <div className="carousel-inner">
           <div className="carousel-item active" data-bs-interval="2000">
-            <img id="carausalimg" src="https://images.pexels.com/photos/6062040/pexels-photo-6062040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="d-block w-100" alt="..." />
+            <img id="carausalimg" src="https://images.pexels.com/photos/10548499/pexels-photo-10548499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1 style={{ marginTop: "-240px" }}>Tom N Jerry Restro</h1>
               <h3>Where every bite tells a story, and every moment becomes a memory.</h3>
             </div>
           </div>
           <div className="carousel-item" data-bs-interval="2000">
-            <img id="carausalimg" src="https://images.pexels.com/photos/10548499/pexels-photo-10548499.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="d-block w-100" alt="..." />
+            <img id="carausalimg" src="https://images.pexels.com/photos/6062040/pexels-photo-6062040.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h1 style={{ marginTop: "-240px" }}>Tom N Jerry Bar</h1>
               <h3>Sip, socialize, and savor - where every glass holds a tale and every moment is steeped in conviviality.</h3>

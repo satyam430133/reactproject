@@ -119,14 +119,13 @@ footer ul li{
     background-color: #212529;
     height: 500px;
 }
-.menuoption{
+ .menuoption{
     height: auto;
     width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    text-align: center;
 }
-.menuoption div {
+ .menuoption div {
     text-align: center;
     display: grid;
     height: 400px;
@@ -136,9 +135,7 @@ footer ul li{
 .menuoption div img{
     width: 100%;
     height: auto;
-}
-
-
+}  
 
 
 
