@@ -4,7 +4,7 @@ import { Card, Button } from 'react-bootstrap';
 const PubPage = () => {
   return (
    <>
-   <div style={{height:"122px"}}></div>
+   <div style={{height:"120px"}}></div>
    <div className="pubcontainer" style={{textAlign:"center"}}>
       <h1>Welcome to Our Pub!</h1>
       <p>Here you'll find information about our pub and some of our offerings:</p>
