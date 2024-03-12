@@ -32,8 +32,8 @@ const SearchResultsPage = () => {
       <h1> Search Result </h1>
       {searchTerm}
       </div>
-      {searchTerm && searchResults.length > 0 && (
-        <div className="row row-cols-1 row-cols-md-3 g-4">
+      {searchTerm && searchResults.length  > 0 && (
+          <div className="row row-cols-1 row-cols-md-3 g-4">
           {searchResults.map(product => (
             <div key={product.id} className="col">
               <div className="card h-100">

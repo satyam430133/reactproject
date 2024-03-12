@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const PubPage = () => {
   return (
@@ -18,7 +19,7 @@ const PubPage = () => {
               <Card.Text>
                 We offer a wide selection of craft beers.
               </Card.Text>
-              <Button variant="primary">Learn More</Button>
+              <Button variant="primary"> <Link to='/bearcards'> Learn More </Link> </Button>
             </Card.Body>
           </Card>
         </div>
@@ -53,3 +54,4 @@ const PubPage = () => {
 };
 
 export default PubPage;
+// #this ====

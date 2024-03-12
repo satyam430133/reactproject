@@ -52,10 +52,12 @@ const MyCart = () => {
                   <p> <img src={item.image} height="90px" /> </p>
                   <p> {item.name} </p>
                   <p> {item.price} </p>
-                  <p> 
-                    <button className='btn' onClick={() => decrement(item.id)}> - </button> 
-                    {item.quantity} 
-                    <button className='btn' onClick={() => increprocout(item.id)} > + </button> 
+                  <p style={{display:"flex",justifyContent:"center",alignItems:"baseline",gap:"5%"}} > 
+                    <button style={{ height:"42px",width:"42px"}} className='btn' onClick={() => decrement(item.id)}> - </button> 
+                    <p style={{ height:"42px",width:"42px",border:"solid 2px",display:"flex",
+                  justifyContent:"center",alignItems:"center"
+                  }}> {item.quantity} </p>
+                    <button style={{ height:"42px",width:"42px"}} className='btn' onClick={() => increprocout(item.id)} > + </button> 
                   </p>
                   <p> {item.quantity * item.price} </p>   
                   <button className='btn' onClick={() => deleteItem(item.id)}> Delete </button>

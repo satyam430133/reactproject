@@ -104,10 +104,18 @@ const PaymentPage = () => {
               </div>
             </>
           )}
+          {paymentMethod === 'phonepe-gpay' && (
+            <>
+              <div style={{textAlign:"center"}}>
+                <img src='https://resize.indiatvnews.com/en/resize/newbucket/1200_-/2020/08/google-pay-phonepe-1597071677.jpg'  height="100px" /> <br/>
+                <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/330px-QR_code_for_mobile_English_Wikipedia.svg.png' alt='...' />
+              </div>
+            </>
+          )}
           <button class="btn" disabled={!isPaymentReady()}> <Link className='buttoncolor' to="/paymentsuccess"> Proceed to Payment </Link> </button>
         </form>
       </div>
-      <div style={{height:"90px"}}></div>
+      {/* <div style={{height:"90px"}}></div> */}
     </>
   );
 };
