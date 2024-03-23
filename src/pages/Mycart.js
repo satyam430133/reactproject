@@ -25,7 +25,7 @@ const MyCart = () => {
     margin: 0, padding: 0, display: "flex",justifyContent:"center", alignItems: "center", BackgroundColor: "#f0f0f0"
   }
   return (
-    <>
+    <>  
       <div style={{height:"100px"}}></div>
       <div className='mycartt'>   
         <h2> My Cart </h2>
